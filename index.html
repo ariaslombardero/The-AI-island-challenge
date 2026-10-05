@@ -584,6 +584,7 @@ body[data-visual-mode="hd"] #rules-modal .rule-title,body[data-visual-mode="hd"]
         set('receptionist', state.flags.s1_isTransparent); set('data-book', state.flags.s2_reviewRegistered);
         set('hr-skull', state.flags.s2_biasMitigated); set('magic-barrier', state.flags.s2_biasMitigated);
         set('parrot', state.flags.s3_parrotBroken); set('safe', state.flags.s3_safeOpen);
+        document.getElementById('stamp').style.display = state.flags.s3_safeOpen && !state.flags.s3_hasStamp ? 'block' : 'none';
         set('lever', state.flags.s3_safeOpen); set('social-eye', state.flags.s4_eyeDestroyed);
         set('final-door', state.flags.s4_doorOpen);
         const hero = document.getElementById('hero-render');
